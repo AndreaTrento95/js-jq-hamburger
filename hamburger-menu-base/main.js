@@ -1,19 +1,18 @@
 $(document).ready(function(){
     // referances
     var hamburger_menu = $('.hamburger-menu');
-    var hamburger_lista = $('.hamburger-menu ul li a');
-    var haburger_hide = false;
-    var header_right_ul = $('.header-rigth ul');
+    var header_rigth_a = $('.fas.fa-bars');
+    var close = $('.fas.fa-times');
 
 
-    // 
-    hamburger_menu.click(function(){
-       hamburger_menu.hide();
-       hamburger_hide = true;
+    // cliccando sull'icona dell' hamburger-menu mostro l'hamburger menu
+    header_rigth_a.click(function(){
+        hamburger_menu.fadeIn(2000);
     })
 
-    if(hamburger_hide){
-        header_right_ul.show();
-    }
+    // cliccando due volte sulla x dell'hamburger menu nascondo l'hamburger menu
+    close.dblclick(function(){
+        hamburger_menu.fadeOut(2000);
+    })
 
 })
